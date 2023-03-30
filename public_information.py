@@ -1,5 +1,6 @@
 # Import necessary libraries
 import openai, json
+import argparse
 from GPTKey import api_key
 
 # Set up OpenAI API credentials
@@ -53,8 +54,11 @@ def generate_response(prompt):
     return 
 
 # Example usage
+
+
 print('Starting anaysis...')
-prompt = "I ate a burger for lunch today, and it was delicious. The bun was soft, and the meat was juicy. The fries were crispy and salty. Can you tell me more about burgers?"
+user_input = input('What have you eaten today?')
+prompt = user_input#"I ate a burger for lunch today, and it was delicious. The bun was soft, and the meat was juicy. The fries were crispy and salty. Can you tell me more about burgers?"
 print('Generating response... ')
 response = generate_response(prompt)
 print(response)
